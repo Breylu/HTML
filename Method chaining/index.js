@@ -1,4 +1,4 @@
-let username = window.prompt("Enter your username: ");
+// let username = window.prompt("Enter your username: ");
 
 // ------- NO METHOD CHAINING --------
 
