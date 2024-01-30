@@ -51,3 +51,22 @@ const person4 = {
 
 person3.sayHello();
 person4.sayHello();
+
+// -------- CONSTRUCTOR METHOD --------
+
+function Car(make, model, year, color) {
+  (this.make = make),
+    (this.model = model),
+    (this.year = year),
+    (this.color = color),
+    (this.drive = function () {
+      console.log(`You drive the ${this.model}`);
+    });
+}
+
+const car1 = new Car("Honda", "Civic", 1998, "white");
+const car2 = new Car("Ford", "F150", 2022, "black");
+
+car1.drive();
+car2.drive();
+car3.drive();
