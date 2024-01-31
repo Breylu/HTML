@@ -67,38 +67,58 @@
 // user1.sayHello();
 // console.log(User.username);
 
-// ------- INHERITANCE -------
+// ------- INHERITANCE AND SUPER KEYWORD -------
 
 class Animal {
-  alive = true;
+  //   alive = true;
+  //   eat() {
+  //     console.log(`This ${this.name} is eating`);
+  //   }
+  //   sleep() {
+  //     console.log(`This ${this.name} is sleeping`);
+  //   }
 
-  eat() {
-    console.log(`This ${this.name} is eating`);
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
   }
-  sleep() {
-    console.log(`This ${this.name} is sleeping`);
+
+  move(speed) {
+    console.log(`The ${this.name} moves at a speed of ${speed} km/h`);
   }
 }
 class Rabbit extends Animal {
-  name = "rabbit";
+  constructor(name, age, runSpeed) {
+    super(name, age);
+    this.runSpeed = runSpeed;
+  }
+
   run() {
-    console.log(`This ${this.name} is runnning`);
+    console.log(`This ${this.name} can run`);
+    super.move(this.runSpeed);
   }
 }
 class Fish extends Animal {
-  name = "fish";
+  constructor(name, age, swimSpeed) {
+    super(name, age);
+    this.swimSpeed = swimSpeed;
+  }
   swim() {
-    console.log(`This ${this.name} is swimming`);
+    console.log(`This ${this.name} can swim`);
+    super.move(this.swimSpeed);
   }
 }
 class Hawk extends Animal {
-  name = "hawk";
+  constructor(name, age, flySpeed) {
+    super(name, age);
+    this.flySpeed = flySpeed;
+  }
+  fly() {
+    console.log(`This ${this.name} can fly`);
+    super.move(this.flySpeed);
+  }
 }
 
-const rabbit = new Rabbit();
-const fish = new Fish();
-const hawk = new Hawk();
-
-rabbit.alive = false;
-
-console.log(rabbit.alive);
+const rabbit = new Rabbit("rabbit", 1, 25);
+const fish = new Fish("fish", 6, 10);
+const hawk = new Hawk("hawk", 3, 125);
