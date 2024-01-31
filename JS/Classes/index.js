@@ -40,29 +40,65 @@
 
 // console.log(mathUtil.getCircumference(10));
 
-class User {
-  static userCount = 0;
+// class User {
+//   static userCount = 0;
 
-  constructor(username) {
-    this.username = username;
-    User.userCount++;
-  }
+//   constructor(username) {
+//     this.username = username;
+//     User.userCount++;
+//   }
 
-  static getUserCount() {
-    console.log(`There are ${User.userCount} users online`);
+//   static getUserCount() {
+//     console.log(`There are ${User.userCount} users online`);
+//   }
+//   sayHello() {
+//     console.log(`Hello, my username is ${this.username}`);
+//   }
+// }
+
+// const user1 = new User("Spongebob");
+// const user2 = new User("Patrick");
+// const user3 = new User("Squidward");
+
+// console.log(user1.username);
+// console.log(user2.username);
+// console.log(user3.username);
+
+// user1.sayHello();
+// console.log(User.username);
+
+// ------- INHERITANCE -------
+
+class Animal {
+  alive = true;
+
+  eat() {
+    console.log(`This ${this.name} is eating`);
   }
-  sayHello() {
-    console.log(`Hello, my username is ${this.username}`);
+  sleep() {
+    console.log(`This ${this.name} is sleeping`);
   }
 }
+class Rabbit extends Animal {
+  name = "rabbit";
+  run() {
+    console.log(`This ${this.name} is runnning`);
+  }
+}
+class Fish extends Animal {
+  name = "fish";
+  swim() {
+    console.log(`This ${this.name} is swimming`);
+  }
+}
+class Hawk extends Animal {
+  name = "hawk";
+}
 
-const user1 = new User("Spongebob");
-const user2 = new User("Patrick");
-const user3 = new User("Squidward");
+const rabbit = new Rabbit();
+const fish = new Fish();
+const hawk = new Hawk();
 
-console.log(user1.username);
-console.log(user2.username);
-console.log(user3.username);
+rabbit.alive = false;
 
-user1.sayHello();
-console.log(User.username);
+console.log(rabbit.alive);
