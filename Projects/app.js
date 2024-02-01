@@ -8,17 +8,17 @@ const ROWS = 3;
 const COLS = 3;
 
 const SYMBOLS_COUNT = {
-  A: 2,
-  B: 4,
-  C: 6,
-  D: 8,
+  A: 4,
+  B: 6,
+  C: 8,
+  D: 10,
 };
 
 const SYMBOL_VALUES = {
-  A: 5,
-  B: 4,
-  C: 3,
-  D: 2,
+  A: 6,
+  B: 5,
+  C: 4,
+  D: 3,
 };
 
 const deposit = () => {
