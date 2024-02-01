@@ -129,33 +129,82 @@
 // console.log(person.hobbies[2]);
 // console.log(person.address.street);
 
-class Person {
-  constructor(name, age, ...address) {
-    this.name = name;
-    this.age = age;
-    this.address = new Address(...address);
-  }
-}
+// class Person {
+//   constructor(name, age, ...address) {
+//     this.name = name;
+//     this.age = age;
+//     this.address = new Address(...address);
+//   }
+// }
 
-class Address {
-  constructor(street, city, country) {
-    this.street = street;
-    this.city = city;
-    this.country = country;
-  }
-}
+// class Address {
+//   constructor(street, city, country) {
+//     this.street = street;
+//     this.city = city;
+//     this.country = country;
+//   }
+// }
 
-const person1 = new Person(
-  "Spongebob",
-  30,
-  "124 Conch St.",
-  "Bikini Bottom",
-  "Int. Waters"
-);
-const person2 = new Person(
-  "Patrick",
-  50,
-  "129 Conch St.",
-  "Bikini Bottom",
-  "Int. Waters"
-);
+// const person1 = new Person(
+//   "Spongebob",
+//   30,
+//   "124 Conch St.",
+//   "Bikini Bottom",
+//   "Int. Waters"
+// );
+// const person2 = new Person(
+//   "Patrick",
+//   50,
+//   "129 Conch St.",
+//   "Bikini Bottom",
+//   "Int. Waters"
+// );
+
+// -------- ARRAYS OF OBJECTS --------
+
+// const fruits = [
+//   { name: "apple", color: "red", calories: 95 },
+//   { name: "orange", color: "orange", calories: 45 },
+//   { name: "banana", color: "yellow", calories: 105 },
+//   { name: "coconut", color: "white", calories: 155 },
+//   { name: "pinapple", color: "yellow", calories: 35 },
+// ];
+
+// // ADDS A ANOTHER FRUIT
+// fruits.push({ name: "grapes", color: "purple", calories: 62 });
+// // REMOVES LAST FRUIT
+// fruits.pop();
+
+// // -------- ForEach() --------
+
+// fruits.forEach((fruit) => console.log(fruit.name));
+
+// // -------- MAP() --------
+
+// const fruitNames = fruits.map((fruit) => fruit.name);
+
+// // -------- FILTER() --------
+
+// const yellowFruits = fruits.filter((fruit) => fruit.color === "yellow");
+// const lowCalFruits = fruits.filter((fruit) => fruit.calories < 100);
+
+// // -------- REDUCE() --------
+
+// const highestCal = fruits.reduce((highestCal, fruit) =>
+//   fruit.calories > highestCal.calories ? fruit : highestCal
+// );
+
+// // -------- SORT() --------
+
+// let fruits = ["apple", "orange", "banana", "coconut", "pinapple"];
+
+// fruits.sort((a, b) => a - b);
+
+// const people = [
+//   { name: "Spongebob", age: 30, gpa: 3.0 },
+//   { name: "Patrick", age: 50, gpa: 1.5 },
+//   { name: "Squidward", age: 70, gpa: 3.5 },
+//   { name: "Sandy", age: 20, gpa: 4.0 },
+// ];
+
+// people.sort((a, b) => a.name.localeCompare(b.name));
