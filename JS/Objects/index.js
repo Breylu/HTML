@@ -1,72 +1,108 @@
+// const person1 = {
+//   firstName: "Spongebob",
+//   lastName: "Squarepants",
+//   age: 30,
+//   isEmployed: true,
+//   sayHello: function () {
+//     console.log("Hi! Im Sponge :)");
+//   },
+// };
+
+// const person2 = {
+//   firstName: "Patrick",
+//   lastName: "Star",
+//   age: 45,
+//   isEmployed: false,
+//   sayHello: () => console.log("NO, THIS IS PATRICK!"),
+// };
+
+// console.log(person1.firstName);
+// console.log(person1.lastName);
+// console.log(person1.age);
+// console.log(person1.isEmployed);
+// person1.sayHello;
+
+// console.log(person2.firstName);
+// console.log(person2.lastName);
+// console.log(person2.age);
+// console.log(person2.isEmployed);
+// person2.sayHello;
+
+// // -------- THIS REFERENCE TO OBJECTS --------
+
+// const person3 = {
+//   firstName: "Spongebob",
+//   lastName: "Squarepants",
+//   age: 30,
+//   isEmployed: true,
+//   sayHello: function () {
+//     console.log(`Hi! Im ${this.firstName}, im ${this.age} years old :)`);
+//   },
+// };
+// const person4 = {
+//   firstName: "Squidward",
+//   favFood: "pizza",
+//   age: 50,
+//   isEmployed: true,
+//   sayHello: function () {
+//     console.log(`Hi! Im ${this.firstName}, i like ${this.favFood} :)`);
+//   },
+// };
+
+// person3.sayHello();
+// person4.sayHello();
+
+// // -------- CONSTRUCTOR METHOD --------
+
+// function Car(make, model, year, color) {
+//   (this.make = make),
+//     (this.model = model),
+//     (this.year = year),
+//     (this.color = color),
+//     (this.drive = function () {
+//       console.log(`You drive the ${this.model}`);
+//     });
+// }
+
+// const car1 = new Car("Honda", "Civic", 1998, "white");
+// const car2 = new Car("Ford", "F150", 2022, "black");
+
+// car1.drive();
+// car2.drive();
+// car3.drive();
+
+// -------- DESTRUCTURING METHOD --------
+
+// let a = 1;
+// let b = 2;
+
+// [a, b] = [b, a];
+
+// const colors = ["red", "green", "blue", "black"];
+
+// [colors[0], colors[3]] = [colors[3], colors[0]];
+
+// const [firstColor, secondColor, thirdColor, ...extraColors] = colors;
+
+function displayPerson({ firstName, lastName, age, job = "Unemployed" }) {
+  console.log(`name: ${firsName} ${lastName}`);
+  console.log(`age: ${age}`);
+  console.log(`job: ${job}`);
+}
+
 const person1 = {
   firstName: "Spongebob",
   lastName: "Squarepants",
   age: 30,
-  isEmployed: true,
-  sayHello: function () {
-    console.log("Hi! Im Sponge :)");
-  },
+  job: "Fry cook",
 };
 
 const person2 = {
   firstName: "Patrick",
   lastName: "Star",
-  age: 45,
-  isEmployed: false,
-  sayHello: () => console.log("NO, THIS IS PATRICK!"),
-};
-
-console.log(person1.firstName);
-console.log(person1.lastName);
-console.log(person1.age);
-console.log(person1.isEmployed);
-person1.sayHello;
-
-console.log(person2.firstName);
-console.log(person2.lastName);
-console.log(person2.age);
-console.log(person2.isEmployed);
-person2.sayHello;
-
-// -------- THIS REFERENCE TO OBJECTS --------
-
-const person3 = {
-  firstName: "Spongebob",
-  lastName: "Squarepants",
-  age: 30,
-  isEmployed: true,
-  sayHello: function () {
-    console.log(`Hi! Im ${this.firstName}, im ${this.age} years old :)`);
-  },
-};
-const person4 = {
-  firstName: "Squidward",
-  favFood: "pizza",
   age: 50,
-  isEmployed: true,
-  sayHello: function () {
-    console.log(`Hi! Im ${this.firstName}, i like ${this.favFood} :)`);
-  },
 };
 
-person3.sayHello();
-person4.sayHello();
+displayPerson(person1);
 
-// -------- CONSTRUCTOR METHOD --------
-
-function Car(make, model, year, color) {
-  (this.make = make),
-    (this.model = model),
-    (this.year = year),
-    (this.color = color),
-    (this.drive = function () {
-      console.log(`You drive the ${this.model}`);
-    });
-}
-
-const car1 = new Car("Honda", "Civic", 1998, "white");
-const car2 = new Car("Ford", "F150", 2022, "black");
-
-car1.drive();
-car2.drive();
-car3.drive();
+// const { firstName, lastName, age, job = "Unemployed" } = person1;
