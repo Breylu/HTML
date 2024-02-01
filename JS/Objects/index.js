@@ -193,18 +193,3 @@
 // const highestCal = fruits.reduce((highestCal, fruit) =>
 //   fruit.calories > highestCal.calories ? fruit : highestCal
 // );
-
-// // -------- SORT() --------
-
-// let fruits = ["apple", "orange", "banana", "coconut", "pinapple"];
-
-// fruits.sort((a, b) => a - b);
-
-// const people = [
-//   { name: "Spongebob", age: 30, gpa: 3.0 },
-//   { name: "Patrick", age: 50, gpa: 1.5 },
-//   { name: "Squidward", age: 70, gpa: 3.5 },
-//   { name: "Sandy", age: 20, gpa: 4.0 },
-// ];
-
-// people.sort((a, b) => a.name.localeCompare(b.name));
