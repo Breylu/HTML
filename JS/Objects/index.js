@@ -84,25 +84,78 @@
 
 // const [firstColor, secondColor, thirdColor, ...extraColors] = colors;
 
-function displayPerson({ firstName, lastName, age, job = "Unemployed" }) {
-  console.log(`name: ${firsName} ${lastName}`);
-  console.log(`age: ${age}`);
-  console.log(`job: ${job}`);
-}
+// function displayPerson({ firstName, lastName, age, job = "Unemployed" }) {
+//   console.log(`name: ${firsName} ${lastName}`);
+//   console.log(`age: ${age}`);
+//   console.log(`job: ${job}`);
+// }
 
-const person1 = {
-  firstName: "Spongebob",
-  lastName: "Squarepants",
-  age: 30,
-  job: "Fry cook",
-};
+// const person1 = {
+//   firstName: "Spongebob",
+//   lastName: "Squarepants",
+//   age: 30,
+//   job: "Fry cook",
+// };
 
-const person2 = {
-  firstName: "Patrick",
-  lastName: "Star",
-  age: 50,
-};
+// const person2 = {
+//   firstName: "Patrick",
+//   lastName: "Star",
+//   age: 50,
+// };
 
-displayPerson(person1);
+// displayPerson(person1);
 
 // const { firstName, lastName, age, job = "Unemployed" } = person1;
+
+// -------- NESTED OBJECTS --------
+
+// const person = {
+//   fullname: "Spongebob Squarepants",
+//   age: 30,
+//   isStudent: true,
+//   hobbies: ["karate", "jellyfishing", "cooking"],
+//   address: {
+//     street: "124 Conch St.",
+//     city: "Bikini Bottom",
+//     country: "Int. Water",
+//   },
+// };
+
+// for (const property in person.address) {
+//   console.log(person.address[property]);
+// }
+
+// console.log(person.isStudent);
+// console.log(person.hobbies[2]);
+// console.log(person.address.street);
+
+class Person {
+  constructor(name, age, ...address) {
+    this.name = name;
+    this.age = age;
+    this.address = new Address(...address);
+  }
+}
+
+class Address {
+  constructor(street, city, country) {
+    this.street = street;
+    this.city = city;
+    this.country = country;
+  }
+}
+
+const person1 = new Person(
+  "Spongebob",
+  30,
+  "124 Conch St.",
+  "Bikini Bottom",
+  "Int. Waters"
+);
+const person2 = new Person(
+  "Patrick",
+  50,
+  "129 Conch St.",
+  "Bikini Bottom",
+  "Int. Waters"
+);
