@@ -193,3 +193,15 @@
 // const highestCal = fruits.reduce((highestCal, fruit) =>
 //   fruit.calories > highestCal.calories ? fruit : highestCal
 // );
+
+// // -------- .ToLocaleString() --------
+
+// .toLocaleString() = returns a string with a language sensitive representation of a number
+
+// let number = 123456.78;
+
+// number = number.toLocaleString("en-US");
+// number = number.toLocaleString("de-DE");
+// number = number.toLocaleString("undefined");
+
+// number = number.toLocaleString("en-US", { style: "currency", currency: "USD" });
