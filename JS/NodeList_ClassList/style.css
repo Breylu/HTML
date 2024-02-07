@@ -1,0 +1,33 @@
+#myButton{
+    font-size: 4rem;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: aquamarine;
+    color: white;
+}
+.myButtons{
+    font-size: 4rem;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: aquamarine;
+    color: white;
+}
+.enabled{
+    background-color: hsl(0, 0%, 60%);
+    color: hsl(0, 0%, 80%);
+}
+.disabled{
+    background-color: hsl(0, 0%, 60%);
+    color: hsl(0, 0%, 80%);
+}
+.hover{
+    background-color: hsl(0, 0%, 60%);
+    color: hsl(0, 0%, 80%);
+}
+#myH1{
+    font-size: 5rem;
+}
