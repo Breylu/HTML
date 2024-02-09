@@ -37,38 +37,38 @@ function takeOutTrash() {
   });
 }
 
+walkDog()
+  .then((value) => {
+    console.log(value);
+    return cleanKitchen();
+  })
+  .then((value) => {
+    console.log(value);
+    return takeOutTrash();
+  })
+  .then((value) => {
+    console.log(value);
+    console.log("You finished all the chores!");
+  })
+  .catch((error) => console.error(error));
+
 // --------------------- ASYNC/AWAIT ---------------------
 
-async function doChores() {
-  try {
-    const walkDogResult = await walkDog();
-    console.log(walkDogResult);
+// async function doChores() {
+//   try {
+//     const walkDogResult = await walkDog();
+//     console.log(walkDogResult);
 
-    const cleanKitchenResult = await cleanKitchen();
-    console.log(cleanKitchenResult);
+//     const cleanKitchenResult = await cleanKitchen();
+//     console.log(cleanKitchenResult);
 
-    const takeOutTrashResult = await takeOutTrash();
-    console.log(takeOutTrashResult);
+//     const takeOutTrashResult = await takeOutTrash();
+//     console.log(takeOutTrashResult);
 
-    console.log("You finished all the chores");
-  } catch (error) {
-    console.error(error);
-  }
-}
+//     console.log("You finished all the chores");
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
 
-doChores;
-
-// walkDog()
-//   .then((value) => {
-//     console.log(value);
-//     return cleanKitchen();
-//   })
-//   .then((value) => {
-//     console.log(value);
-//     return takeOutTrash();
-//   })
-//   .then((value) => {
-//     console.log(value);
-//     console.log("You finished all the chores!");
-//   })
-//   .catch((error) => console.error(error));
+// doChores;
